@@ -28,12 +28,13 @@ Neo4j: http://192.168.1.21:7474
 ```
 
 Se clonó el repositorio https://github.com/lopezdar222/herramientas_big_data
-```
 
 ## 1) HDFS
 
-Se levanta el entorno sudo docker-compose -f docker-compose-v1.yml up -d
-
+Se levanta el entorno 
+```
+sudo docker-compose -f docker-compose-v1.yml up -d
+```
 Se copian los archivos ubicados en la carpeta Datasets, dentro del contenedor "namenode"
 
 ```
@@ -53,12 +54,14 @@ Se copian los archivos csv provistos a HDFS:
 
 ## 2) Hive
 
-Se levanta el entorno sudo docker-compose -f docker-compose-v2.yml up -d
-
+Se levanta el entorno 
+```
+sudo docker-compose -f docker-compose-v2.yml up -d
+```
 Crear tablas en Hive, a partir de los csv ingestados en HDFS.
 
 Para esto, se ingresa al contenedor Hive y se realiza la creación de las tablas respectivas, con el archivo tablas_hive.hql
-```
+
 
 
 ## 3) Formatos de Almacenamiento
@@ -75,12 +78,14 @@ Se crean 4 indices en las tablas venta y compra para obtener mejoras en las cons
 
 
  
-```
+
 
 ## 5) No-SQL
 
-Se levanta el entorno sudo docker-compose -f docker-compose-v3.yml up -d
-
+Se levanta el entorno
+```
+sudo docker-compose -f docker-compose-v3.yml up -d
+```
 Se siguen las instrucciones respectivas con cada uno de las herramientas mencionadas a continuación
 
 #### 1) HBase:
