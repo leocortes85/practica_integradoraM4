@@ -305,6 +305,7 @@ Cargar raw-flight-data.csv desde HDFS.
 	flights = spark.read.csv('hdfs://namenode:9000/data/flights/raw-flight-data.csv', schema=flightSchema, header=True)
   
   	flights.show()
+   ```
 	  +----------+---------+-------+---------------+-------------+--------+--------+
 |DayofMonth|DayOfWeek|Carrier|OriginAirportID|DestAirportID|DepDelay|ArrDelay|
 +----------+---------+-------+---------------+-------------+--------+--------+
@@ -332,6 +333,7 @@ Cargar raw-flight-data.csv desde HDFS.
 only showing top 20 rows
   	flights.describe()
 ```
+```
 
 Ubicarse en la línea de comandos del Spark master y comenzar Scala.
 ```
@@ -345,7 +347,7 @@ Cargar raw-flight-data.csv desde HDFS.
 	val flights = spark.read.format("csv").option("sep", ",").option("header", "true").load("hdfs://namenode:9000/data/flights/raw-flight-data.csv").as[flightSchema]
 
   	flights.show()
-
+```
 +----------+---------+-------+---------------+-------------+--------+--------+
 |DayofMonth|DayOfWeek|Carrier|OriginAirportID|DestAirportID|DepDelay|ArrDelay|
 +----------+---------+-------+---------------+-------------+--------+--------+
@@ -372,7 +374,7 @@ Cargar raw-flight-data.csv desde HDFS.
 +----------+---------+-------+---------------+-------------+--------+--------+
 only showing top 20 rows
 ```
-
+```
 
 ```	
 
